@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enrollment Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h2>📋 Enroll for <span id="exam-type"></span> Exam</h2>
+
+  <form class="enroll-form">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" required />
+
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" required />
+
+    <label for="exam">Select Exam Type:</label>
+    <select id="exam">
+      <option value="NAPOLCOM">NAPOLCOM</option>
+      <option value="CivilService">Civil Service</option>
+    </select>
+
+    <label for="payment">Mode of Payment:</label>
+    <select id="payment">
+      <option value="GCash">GCash</option>
+      <option value="Bank">Bank Transfer</option>
+      <option value="Maya">Maya</option>
+    </select>
+
+    <button type="submit">Submit Enrollment</button>
+  </form>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const exam = urlParams.get('exam');
+    document.getElementById("exam-type").textContent = exam || "your selected";
+    document.getElementById("exam").value = exam || "NAPOLCOM";
+  </script>
+</body>
+</html>

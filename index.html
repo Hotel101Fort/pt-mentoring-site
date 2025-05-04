@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PT Mentoring Enrollment</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="mandirigma.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="your-logo.png" alt="PT Mentoring Logo" class="logo"/>
+  </div>
+
+  <!-- Card Section -->
+  <div class="card-container">
+    <div class="card">
+      <h3>NAPOLCOM</h3>
+      <p>Click to view fee details.</p>
+      <button onclick="showInfo('napolcom')">View Details</button>
+      <a href="enroll.html?exam=NAPOLCOM" target="_blank">
+        <button class="enroll-btn">Enroll Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Civil Service</h3>
+      <p>Click to view fee details.</p>
+      <button onclick="showInfo('civil')">View Details</button>
+      <a href="enroll.html?exam=CivilService" target="_blank">
+        <button class="enroll-btn">Enroll Now</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Announcement Section -->
+  <section class="announcement">
+    <h2>📢 Announcements</h2>
+    <p>Check back here regularly for updates on scholarship availability and batch schedules.</p>
+  </section>
+
+  <!-- Passers Section -->
+  <section class="passers">
+    <h2>✅ Passers</h2>
+    <p>Coming soon: Pictures and names of successful examinees!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📞 +63 97 790 4632</p>
+    <p>
+      <a href="https://www.facebook.com/PTMentoring" target="_blank">Facebook</a> |
+      <a href="https://www.youtube.com/PTMentoring" target="_blank">YouTube</a>
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
